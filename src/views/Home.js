@@ -10,12 +10,11 @@ export default function Home(props){
             <Button
                 buttonStyle={styles.button}
                 icon={{
-                    name: "arrow-right",
-                    size: 50,
+                    name: "play-arrow",
+                    size: 70,
                     color: "white",
                     padding: 1
                   }} 
-                // title='Play'
                 onPress={()=>props.navigation.navigate('Menu')}>
             </Button>
             <Text style={styles.text}>Feito pra te manter segura.</Text>
@@ -40,14 +39,14 @@ const styles = StyleSheet.create({
         width:'100%',
     },
     button:{
+        width: 100,
+        height: 100,
         backgroundColor: 'rgb(198,48,41)',
         borderRadius: 60,
-        // padding: 20,
     },
     text:{
-        fontSize:18,
+        fontSize:25,
         top:150,
-        // fontFamily:'Raleway-Thin',
         color:'white'
     }
   });
