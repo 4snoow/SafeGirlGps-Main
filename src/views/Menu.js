@@ -30,7 +30,14 @@ export default function Login(props){
       }, []);
 
     function EnviarMensagem(){
-        Linking.openURL('whatsapp://send?text=' + `Estou em perigo, SOCORRO! *Essa é uma mensagem rápida de alerta do aplicativo Safe Girl Gps* Latitude: ${JSON.stringify(coordinate.latitude)} Longitude: ${JSON.stringify(coordinate.longitude)} https://www.google.com.br/maps/dir/-12.2715286,-38.9551938/${JSON.stringify(coordinate.latitude)},${JSON.stringify(coordinate.longitude)}/@${JSON.stringify(coordinate.latitude)},${JSON.stringify(coordinate.longitude)},16.78z ` +  '&phone=55' + '75992112551')
+        Linking.openURL('whatsapp://send?text=' + `⚠️ Estou em perigo, SOCORRO! *Essa é uma mensagem rápida de alerta do aplicativo Safe Girl Gps*.⚠️
+
+*Minhas coordenadas:* 
+Latitude: ${JSON.stringify(coordinate.latitude)}, 
+Longitude: ${JSON.stringify(coordinate.longitude)}
+
+*Veja como chegar até mim:*
+https://www.google.com.br/maps/dir/-12.2715286,-38.9551938/${JSON.stringify(coordinate.latitude)},${JSON.stringify(coordinate.longitude)}/@${JSON.stringify(coordinate.latitude)},${JSON.stringify(coordinate.longitude)},16.78z ` +  '&phone=55' + '75992112551')
         Linking.sendIntent;
     }
 
@@ -82,7 +89,7 @@ export default function Login(props){
                     size: 100,
                     color: 'white'
                 }}/>
-                <Text style={styles.textStyle}>Assistente</Text>
+                <Text style={styles.textStyle}>Alerta</Text>
             </View>
         </View>
     )

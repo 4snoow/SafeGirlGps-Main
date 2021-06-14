@@ -7,7 +7,7 @@ export default function Policia(props){
     return(
         <View style={styles.container}>
             <ImageBackground source={bgImage} style={styles.backgroundImage}>
-            <Text onPress={()=>{Linking.openURL('tel:190');}} style={styles.funcNavText}>190</Text>
+            <Text onPress={()=>{Linking.openURL('tel:190');}} style={styles.emergencyButton}>190</Text>
             <Text h4 style={styles.title}>Polícia Militar</Text>
             <Text style={styles.text}>
             É o telefone de emergência da Polícia Militar por meio do qual podem ser repassadas/relatadas 
@@ -34,21 +34,22 @@ const styles = StyleSheet.create({
         height: null,
         width:'100%',
     },
-    funcNavText:{
+    emergencyButton:{
         backgroundColor: 'rgb(198,48,41)',
         borderRadius: 60,
-        padding: 30,
+        padding: 35,
         color: 'white',
-        fontSize:16
+        fontSize: 20
     },
     title:{
-        margin:10
+        marginTop: 15,
+        marginBottom: 30
     },
     text:{
         marginBottom: 5,
         marginLeft: 9,
         marginRight: 9,
         textAlign: 'justify',
-        fontSize: 14,
+        fontSize: 20,
     }
   });

@@ -7,7 +7,7 @@ export default function Assistente(props){
     return(
         <View style={styles.container}>
             <ImageBackground source={bgImage} style={styles.backgroundImage}>
-                <Text onPress={()=>{Linking.openURL('tel:180');}} style={styles.funcNavText}>180</Text>
+                <Text onPress={()=>{Linking.openURL('tel:180');}} style={styles.emergencyButton}>180</Text>
                 <Text h4 style={styles.title}>Central de Atendimento à Mulher</Text>
                 <Text style={styles.text}>
                     Presta uma escuta e acolhida qualificada às mulheres em situação 
@@ -40,21 +40,22 @@ const styles = StyleSheet.create({
         height: null,
         width:'100%',
     },
-    funcNavText:{
+    emergencyButton:{
         backgroundColor: 'rgb(198,48,41)',
         borderRadius: 60,
-        padding: 30,
+        padding: 35,
         color: 'white',
-        fontSize:16,
+        fontSize:20,
     },
     title:{
-        margin:10
+        marginTop: 15,
+        marginBottom: 30
     },
     text:{
         marginBottom: 5,
         marginLeft: 9,
         marginRight: 9,
         textAlign: 'justify',
-        fontSize: 14,
+        fontSize: 20,
     }
   });
