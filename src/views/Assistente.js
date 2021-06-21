@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, ImageBackground, StyleSheet, Linking } from 'react-native';
 import {Text} from 'react-native-elements'
-import bgImage from '../../assets/background2.png'
+import bgImage from '../../assets/background.png'
 
 export default function Assistente(props){
     return(
@@ -46,6 +46,7 @@ const styles = StyleSheet.create({
         padding: 35,
         color: 'white',
         fontSize:20,
+        marginTop: 180
     },
     title:{
         marginTop: 15,
@@ -57,5 +58,9 @@ const styles = StyleSheet.create({
         marginRight: 9,
         textAlign: 'justify',
         fontSize: 20,
+        backgroundColor: '#AF3563',
+        color: 'white',
+        padding: 15,
+        borderRadius: 15
     }
   });

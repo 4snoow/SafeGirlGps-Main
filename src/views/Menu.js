@@ -3,7 +3,7 @@ import { View, ImageBackground, StyleSheet, Linking, Text, Image } from 'react-n
 import * as Permissions from 'expo-permissions';
 import * as Location from 'expo-location';
 import {Button} from 'react-native-elements'
-import bgImage from '../../assets/bgc.png'
+import bgImage from '../../assets/menu.png'
 
 export default function Login(props){
 
@@ -42,93 +42,85 @@ https://www.google.com.br/maps/dir/-12.2715286,-38.9551938/${JSON.stringify(coor
     }
 
     return(
-        <View style={styles.container}>
-            {/* <Image source={bgImage} style={styles.backgroundImage}></Image> */}
-            
-            
-            
-            <View>
-                <Button
-                 buttonStyle={styles.box1} 
-                 onPress={()=>props.navigation.navigate('Mapa')} 
-                 icon={{
-                    name: 'place',
-                     size: 100,
-                     color: 'white'
-                }}/>
-                <Text style={styles.textStyle}>Mapa</Text>
-            </View>
-            <View>
-                <Button
-                 buttonStyle={styles.box1} 
-                 onPress={()=>props.navigation.navigate('Policia')} 
-                 icon={{
-                    name: 'local-police', 
-                    size: 100,
-                    color: 'white'
-                }}/>
-                <Text style={styles.textStyle}>Polícia</Text>
-            </View>
-            <View>
-                <Button
-                 buttonStyle={styles.box1} 
-                 onPress={()=>props.navigation.navigate('Assistente')} 
-                 icon={{
-                    name: 'face', 
-                    size: 100,
-                    color: 'white'
-                }}/>
-                <Text style={styles.textStyle}>Assistente</Text>
-            </View>
-            <View>
-                <Button
-                 buttonStyle={styles.box2} 
-                 onPress={() => EnviarMensagem()} 
-                 icon={{
-                    name: 'warning', 
-                    size: 100,
-                    color: 'white'
-                }}/>
-                <Text style={styles.textStyle}>Alerta</Text>
-            </View>
-        </View>
+      <View style={styles.container}>
+      <ImageBackground source={bgImage} style={styles.backgroundImage}>
+      <Button
+          buttonStyle={styles.button}
+          title=''
+          onPress={() => EnviarMensagem()}>
+      </Button>
+      <View style={styles.container2}>
+      <Button
+          buttonStyle={styles.buttons}
+          title=''
+          onPress={()=>props.navigation.navigate('Mapa')}>
+      </Button>
+      <Button
+          buttonStyle={styles.buttons}
+          title=''
+          onPress={()=>props.navigation.navigate('Policia')}>
+      </Button>
+      <Button
+          buttonStyle={styles.buttons}
+          title=''
+          onPress={()=>props.navigation.navigate('Assistente')}>
+      </Button>
+      </View>
+      </ImageBackground>
+  </View>
     )
 }
 
 const styles = StyleSheet.create({
-    container: {
+  container: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+
+
+  //   borderStyle: 'solid',
+  //   borderColor: 'black',
+  //   borderWidth: 1
+  },
+  container2: {
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    marginTop: 50,
+
+  //   borderStyle: 'solid',
+  //   borderColor: 'black',
+  //   borderWidth: 1
+  },
+  backgroundImage:{
       flex: 1,
-      flexDirection: 'row',  
-      justifyContent: 'space-evenly',
-      alignItems: 'flex-end',
-      paddingBottom: 90,
-    //   flexWrap: 'wrap'
-    },
-    backgroundImage:{
-        flex: 1,
-        alignItems: 'center',
-        justifyContent: 'center',
-        resizeMode: 'cover',
-        height: null,
-        width:'100%',
-    },
-    box1: {
-      width: 150,
-      height: 150,
-      borderRadius: 70,
-      backgroundColor: 'rgb(175, 53, 99)',
-    },
-    box2: {
-      width: 150,
-      height: 150,
-      borderRadius: 70,
-      backgroundColor: 'rgb(175, 53, 9)',
-      marginTop: 140
-    },
-    textStyle: {
-      color: 'black',
-      alignSelf: 'center',
-      margin: 20,
-      fontSize: 20,
-    }
+      alignItems: 'center',
+      justifyContent: 'center',
+      resizeMode: 'cover',
+      height: null,
+      width:'100%',
+  },
+  button:{
+      backgroundColor: 'rgba(198,48,41,0.0)',
+      borderRadius: 120,
+      padding: 115,
+      marginTop: 230,
+
+      // borderStyle: 'solid',
+      // borderColor: 'black',
+      // borderWidth: 1
+  },
+  buttons:{
+      backgroundColor: 'rgba(198,48,41,0.0)',
+      borderRadius: 80,
+      padding: 60,
+      // marginRight: 70,
+      marginLeft: 30,
+      marginRight: 30,
+      marginTop: 200,
+
+      // borderStyle: 'solid',
+      // borderColor: 'black',
+      // borderWidth: 1
+  }
   });
