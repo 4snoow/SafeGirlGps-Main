@@ -75,22 +75,13 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     alignItems: 'center',
-    justifyContent: 'center',
-
-
-  //   borderStyle: 'solid',
-  //   borderColor: 'black',
-  //   borderWidth: 1
+    justifyContent: 'center',  
   },
   container2: {
     display: 'flex',
     flexDirection: 'row',
     justifyContent: 'space-between',
-    marginTop: 50,
-
-  //   borderStyle: 'solid',
-  //   borderColor: 'black',
-  //   borderWidth: 1
+    marginTop: 50,  
   },
   backgroundImage:{
       flex: 1,
@@ -104,23 +95,14 @@ const styles = StyleSheet.create({
       backgroundColor: 'rgba(198,48,41,0.0)',
       borderRadius: 120,
       padding: 115,
-      marginTop: 230,
-
-      // borderStyle: 'solid',
-      // borderColor: 'black',
-      // borderWidth: 1
+      marginTop: 230,      
   },
   buttons:{
       backgroundColor: 'rgba(198,48,41,0.0)',
       borderRadius: 80,
-      padding: 60,
-      // marginRight: 70,
+      padding: 60,      
       marginLeft: 30,
       marginRight: 30,
-      marginTop: 200,
-
-      // borderStyle: 'solid',
-      // borderColor: 'black',
-      // borderWidth: 1
+      marginTop: 200,      
   }
   });

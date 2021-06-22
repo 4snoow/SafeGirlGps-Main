@@ -1,12 +1,11 @@
 import React,{useState,useEffect,useRef} from 'react';
-import { Button, Dimensions, StyleSheet, Text, View,Alert } from 'react-native';
+import { Dimensions, StyleSheet, View } from 'react-native';
 import MapView, {Heatmap, Marker} from 'react-native-maps';
-import MapButton from '../components/MapButton';
 import * as Location from 'expo-location';
 import * as Permissions from 'expo-permissions';
 import MapViewDirections from 'react-native-maps-directions';
 import {data} from '../components/datamarkers'
-
+import {points} from '../views/Points'
 
 export default function Mapa() {
 
@@ -31,11 +30,7 @@ export default function Mapa() {
 
 
   return (
-    <View style={styles.container}>
-    
-      {/* <MapButton
-        style ={{top:40, right:180}}
-      /> */}
+    <View style={styles.container}>      
 
       <MapView
       showsUserLocation={true}
@@ -71,8 +66,18 @@ export default function Mapa() {
           />
         )
       })}
-      
-
+      <Heatmap
+            points={points}
+            radius={40}
+            opacity={0.7}
+            gradient={{
+              colors: ["#d63031", "#ff7675", "#d63031", "#d63031", "#d63031"],
+              startPoints: Platform.OS === 'ios' ? [0.01, 0.04, 0.1, 0.45, 0.5] :
+                [0.1, 0.25, 0.5, 0.75, 1],
+              colorMapSize: 2000
+            }}
+          >
+          </Heatmap>
 
         </MapView>
 

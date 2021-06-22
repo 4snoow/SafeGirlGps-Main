@@ -10,7 +10,7 @@ export default function Assistente(props){
                 <Text onPress={()=>{Linking.openURL('tel:180');}} style={styles.emergencyButton}>180</Text>
                 <Text h4 style={styles.title}>Central de Atendimento à Mulher</Text>
                 <Text style={styles.text}>
-                    Presta uma escuta e acolhida qualificada às mulheres em situação 
+                    Presta uma escuta qualificada e acolhe às mulheres em situação 
                     de violência. O serviço registra e encaminha denúncias de violência contra a mulher aos órgão 
                     competentes, bem como reclamações, sugestões ou elogios sobre o funcionamento dos serviços de 
                     atendimento.

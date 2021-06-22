@@ -5,7 +5,6 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import Home from './src/views/Home'
 import Menu from './src/views/Menu'
-// import Alerta from './src/views/Alerta'
 import Mapa from './src/views/Mapa'
 import Assistente from './src/views/Assistente'
 import Policia from './src/views/Policia'
