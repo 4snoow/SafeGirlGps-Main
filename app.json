@@ -21,8 +21,15 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
+        "foregroundImage": "./assets/indicador-gps.png",
         "backgroundColor": "#FFFFFF"
+      },
+      "package": "com.projetointegrado.safegirl",
+      "versionCode": 2,
+      "config": {
+        "googleMaps": {
+          "apiKey": "AIzaSyCDVjbFSS6m2Lm1I_NqsI8P1uBequPjmM4"
+        }
       }
     },
     "web": {

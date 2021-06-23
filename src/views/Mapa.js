@@ -19,7 +19,7 @@ export default function Mapa() {
       const { status, permissions } = await Permissions.askAsync(Permissions.LOCATION);
   if (status === 'granted') {
     let {coords} = await Location.getCurrentPositionAsync({enableHighAcurracy:true});
-    console.log(coords.latitude, coords.longitude)
+    // console.log(coords.latitude, coords.longitude)
   } else {
     throw new Error('Localização não garantida');
   }
@@ -33,6 +33,7 @@ export default function Mapa() {
     <View style={styles.container}>      
 
       <MapView
+      // provider={AIzaSyCDVjbFSS6m2Lm1I_NqsI8P1uBequPjmM4}
       showsUserLocation={true}
       zoomEnabled={true}
       followsUserLocation={true}
@@ -46,14 +47,15 @@ export default function Mapa() {
           
       >
      
-      <MapViewDirections
+      {/* <MapViewDirections
       
-      />
+      /> */}
 
       {/* Trazer os markers do mapa em datamarkers */}
-      {data.map(item => {
+      {data.map((item,index) => {
         return(
           <Marker 
+            key={index}
             coordinate={{
               latitude: item.latitude,
               longitude: item.longitude,
